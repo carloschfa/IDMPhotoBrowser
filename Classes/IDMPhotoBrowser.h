@@ -93,4 +93,8 @@
 // Get IDMPhoto at index
 - (id<IDMPhoto>)photoAtIndex:(NSUInteger)index;
 
+-(void)addPhotos:(NSMutableArray *)photosArray;
+
+- (NSUInteger)numberOfPhotos;
+
 @end

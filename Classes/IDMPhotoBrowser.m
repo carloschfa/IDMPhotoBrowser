@@ -251,6 +251,13 @@ NSLocalizedStringFromTableInBundle((key), nil, [NSBundle bundleWithPath:[[NSBund
 	return self;
 }
 
+- (void)addPhotos:(NSMutableArray *)photosArray{
+    for (IDMPhoto *item in photosArray) {
+        [_photos addObject:item];
+        [self performLayout];
+    }
+}
+
 - (void)dealloc {
     _pagingScrollView.delegate = nil;
     [[NSNotificationCenter defaultCenter] removeObserver:self];
